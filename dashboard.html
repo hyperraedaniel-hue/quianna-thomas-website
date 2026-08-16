@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Quianna Thomas | Owner Dashboard</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Playfair+Display:wght@500;600;700&family=Oswald:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --noir: #0d0709;
+      --black: #171014;
+      --pink: #ee2e96;
+      --hot: #ff63bc;
+      --deep: #a50e63;
+      --cream: #fbf7f5;
+      --white: #ffffff;
+      --muted: #756b70;
+      --line: #eadfe5;
+      --soft-pink: #fff1f8;
+      --green: #247449;
+      --green-bg: #eaf8ef;
+      --yellow: #806000;
+      --yellow-bg: #fff6d9;
+      --red: #982b40;
+      --red-bg: #fcebed;
+      --shadow: 0 12px 35px rgba(46, 20, 34, .07);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background:
+        radial-gradient(circle at top right, rgba(238,46,150,.08), transparent 30%),
+        #f8f3f5;
+      color: var(--noir);
+      font-family: Inter, sans-serif;
+    }
+
+    button,
+    a {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    /* =========================
+       HEADER
+    ========================= */
+
+    .header {
+      min-height: 82px;
+      padding: 0 max(20px, calc((100% - 1160px) / 2));
+      background: var(--noir);
+      color: var(--cream);
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      box-shadow: 0 4px 20px rgba(0,0,0,.12);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand img {
+      width: 48px;
+      height: 48px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 2px solid var(--hot);
+      box-shadow: 0 0 0 3px rgba(238,46,150,.12);
+    }
+
+    .brand strong {
+      display: block;
+      font: 600 17px "Playfair Display", serif;
+      letter-spacing: .01em;
+    }
+
+    .brand span {
+      display: block;
+      margin-top: 3px;
+      color: #c9bdc3;
+      font: 10px Oswald, sans-serif;
+      text-transform: uppercase;
+      letter-spacing: .18em;
+    }
+
+    .logout {
+      border: 1px solid rgba(255,255,255,.24);
+      border-radius: 999px;
+      padding: 11px 18px;
+      background: transparent;
+      color: white;
+
+      font: 500 10px Oswald, sans-serif;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+
+      cursor: pointer;
+      transition: .2s ease;
+    }
+
+    .logout:hover {
+      background: white;
+      color: var(--noir);
+    }
+
+    /* =========================
+       MAIN
+    ========================= */
+
+    .wrap {
+      max-width: 1160px;
+      margin: auto;
+      padding: 48px 20px 70px;
+    }
+
+    .welcome {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 25px;
+      margin-bottom: 30px;
+    }
+
+    .eyebrow {
+      margin-bottom: 10px;
+      color: var(--deep);
+
+      font: 600 11px Oswald, sans-serif;
+      text-transform: uppercase;
+      letter-spacing: .2em;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: "Playfair Display", serif;
+    }
+
+    h1 {
+      margin: 0 0 9px;
+      font-size: clamp(34px, 5vw, 48px);
+      line-height: 1.05;
+      letter-spacing: -.02em;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: 22px;
+    }
+
+    .muted {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.65;
+      font-size: 14px;
+    }
+
+    /* =========================
+       BUTTONS
+    ========================= */
+
+    .btn {
+      min-height: 44px;
+      border: 0;
+      border-radius: 999px;
+      padding: 12px 21px;
+
+      background: linear-gradient(135deg, var(--hot), var(--deep));
+      color: white;
+
+      font: 500 10px Oswald, sans-serif;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+
+      cursor: pointer;
+      text-decoration: none;
+
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+
+      box-shadow: 0 8px 20px rgba(165,14,99,.18);
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 12px 25px rgba(165,14,99,.25);
+    }
+
+    /* =========================
+       STATS
+    ========================= */
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-bottom: 25px;
+    }
+
+    .stat {
+      position: relative;
+      overflow: hidden;
+
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 17px;
+      padding: 22px;
+
+      box-shadow: var(--shadow);
+    }
+
+    .stat::after {
+      content: "";
+      position: absolute;
+      right: -25px;
+      top: -25px;
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      background: rgba(238,46,150,.06);
+    }
+
+    .stat-label {
+      display: block;
+      color: var(--muted);
+
+      font: 500 10px Oswald, sans-serif;
+      text-transform: uppercase;
+      letter-spacing: .13em;
+    }
+
+    .stat strong {
+      display: block;
+      margin-top: 5px;
+      color: var(--deep);
+      font: 700 38px "Playfair Display", serif;
+    }
+
+    .stat-description {
+      display: block;
+      margin-top: 4px;
+      color: #93888e;
+      font-size: 11px;
+    }
+
+    /* =========================
+       PANELS
+    ========================= */
+
+    .panel {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 24px;
+      margin-bottom: 20px;
+      box-shadow: var(--shadow);
+    }
+
+    .panel-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+
+      padding-bottom: 17px;
+      margin-bottom: 18px;
+
+      border-bottom: 1px solid #f0e7eb;
+    }
+
+    .panel-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .panel-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--pink);
+      box-shadow: 0 0 0 5px rgba(238,46,150,.10);
+    }
+
+    /* =========================
+       REFRESH BUTTON
+    ========================= */
+
+    .action {
+      border: 1px solid var(--line);
+      border-radius: 9px;
+      padding: 9px 13px;
+
+      background: white;
+      color: var(--muted);
+
+      font: 500 10px Oswald, sans-serif;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+
+      cursor: pointer;
+      transition: .2s ease;
+    }
+
+    .action:hover {
+      border-color: var(--pink);
+      color: var(--deep);
+      background: var(--soft-pink);
+    }
+
+    /* =========================
+       BOOKINGS
+    ========================= */
+
+    .booking-list {
+      display: grid;
+      gap: 12px;
+    }
+
+    .booking {
+      border: 1px solid var(--line);
+      border-radius: 13px;
+      padding: 18px;
+
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 18px;
+
+      transition: .2s ease;
+    }
+
+    .booking:hover {
+      border-color: #dcb9cc;
+      box-shadow: 0 7px 20px rgba(60,20,40,.05);
+    }
+
+    .booking h3 {
+      margin: 0 0 7px;
+      font-size: 18px;
+    }
+
+    .meta {
+      color: #5f565b;
+      font-size: 13px;
+      line-height: 1.8;
+    }
+
+    .badge {
+      display: inline-block;
+      border-radius: 999px;
+      padding: 5px 10px;
+
+      font: 500 9px Oswald, sans-serif;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+    }
+
+    .pending {
+      background: var(--yellow-bg);
+      color: var(--yellow);
+    }
+
+    .accepted {
+      background: var(--green-bg);
+      color: var(--green);
+    }
+
+    .declined {
+      background: var(--red-bg);
+      color: var(--red);
+    }
+
+    .actions {
+      display: flex;
+      gap: 7px;
+      margin-top: 13px;
+    }
+
+    .actions .action {
+      border: 0;
+    }
+
+    .accept {
+      background: var(--green-bg);
+      color: var(--green);
+    }
+
+    .accept:hover {
+      background: #d9f2e2;
+      color: #185e36;
+    }
+
+    .decline {
+      background: var(--red-bg);
+      color: var(--red);
+    }
+
+    .decline:hover {
+      background: #f8dce1;
+      color: #7f1d30;
+    }
+
+    .empty {
+      padding: 35px 15px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* =========================
+       ACCOUNT
+    ========================= */
+
+    .notice {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+
+      padding: 15px;
+      border-radius: 12px;
+
+      background: var(--soft-pink);
+      color: #6e3155;
+
+      font-size: 12px;
+      line-height: 1.65;
+    }
+
+    .notice-icon {
+      flex: 0 0 auto;
+
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      background: white;
+      color: var(--deep);
+
+      font-weight: 700;
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      padding-top: 10px;
+      text-align: center;
+      color: #a0959b;
+      font-size: 11px;
+    }
+
+    footer strong {
+      color: var(--deep);
+      font-family: "Playfair Display", serif;
+    }
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media (max-width: 700px) {
+
+      .header {
+        min-height: 74px;
+        padding: 0 16px;
+      }
+
+      .brand img {
+        width: 43px;
+        height: 43px;
+      }
+
+      .brand strong {
+        font-size: 15px;
+      }
+
+      .logout {
+        padding: 9px 13px;
+        font-size: 9px;
+      }
+
+      .wrap {
+        padding: 32px 15px 55px;
+      }
+
+      .welcome {
+        align-items: flex-start;
+        flex-direction: column;
+        margin-bottom: 24px;
+      }
+
+      .welcome .btn {
+        width: 100%;
+      }
+
+      .stats {
+        grid-template-columns: 1fr;
+        gap: 11px;
+      }
+
+      .stat {
+        padding: 18px;
+      }
+
+      .stat strong {
+        font-size: 32px;
+      }
+
+      .panel {
+        padding: 18px;
+        border-radius: 15px;
+      }
+
+      .panel-head {
+        align-items: flex-start;
+      }
+
+      .booking {
+        grid-template-columns: 1fr;
+        padding: 16px;
+      }
+
+      .actions {
+        flex-wrap: wrap;
+      }
+
+      .actions .action {
+        flex: 1;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header class="header">
+
+  <div class="brand">
+    <img src="1786871408756.jpg" alt="Quianna Thomas">
+
+    <div>
+      <strong>Quianna Thomas</strong>
+      <span>Owner Dashboard</span>
+    </div>
+  </div>
+
+  <button id="logoutBtn" class="logout">
+    Log Out
+  </button>
+
+</header>
+
+
+<main class="wrap">
+
+  <!-- WELCOME -->
+
+  <section class="welcome">
+
+    <div>
+      <div class="eyebrow">Owner Portal</div>
+
+      <h1>Good to see you, Quianna.</h1>
+
+      <p class="muted">
+        Manage your appointment requests and keep your schedule organized.
+      </p>
+    </div>
+
+    <a class="btn" href="booking.html">
+      View Booking Form
+    </a>
+
+  </section>
+
+
+  <!-- STATISTICS -->
+
+  <section class="stats">
+
+    <div class="stat">
+      <span class="stat-label">Pending</span>
+
+      <strong id="pendingCount">0</strong>
+
+      <span class="stat-description">
+        Requests waiting for review
+      </span>
+    </div>
+
+
+    <div class="stat">
+      <span class="stat-label">Accepted</span>
+
+      <strong id="acceptedCount">0</strong>
+
+      <span class="stat-description">
+        Appointments you've approved
+      </span>
+    </div>
+
+
+    <div class="stat">
+      <span class="stat-label">Declined</span>
+
+      <strong id="declinedCount">0</strong>
+
+      <span class="stat-description">
+        Requests you've declined
+      </span>
+    </div>
+
+  </section>
+
+
+  <!-- BOOKINGS -->
+
+  <section class="panel">
+
+    <div class="panel-head">
+
+      <div class="panel-title">
+        <span class="panel-dot"></span>
+        <h2>Booking Requests</h2>
+      </div>
+
+      <button id="refreshBtn" class="action">
+        Refresh
+      </button>
+
+    </div>
+
+    <div id="bookingList" class="booking-list">
+      <div class="empty">
+        Loading bookings...
+      </div>
+    </div>
+
+  </section>
+
+
+  <!-- ACCOUNT -->
+
+  <section class="panel">
+
+    <div class="panel-head">
+
+      <div class="panel-title">
+        <span class="panel-dot"></span>
+        <h2>Account & Security</h2>
+      </div>
+
+    </div>
+
+    <div class="notice">
+
+      <div class="notice-icon">
+        ✓
+      </div>
+
+      <div>
+        <strong>Your dashboard is protected.</strong><br>
+
+        You are signed in through Supabase Authentication.
+        Appointment information is securely stored in your Supabase database.
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <footer>
+    <strong>Quianna Thomas</strong> · Booking Management
+  </footer>
+
+</main>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
