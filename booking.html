@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Book with Quianna Thomas</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Playfair+Display:wght@600;700&family=Oswald:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --noir:#0D0709;
+      --pink:#EE2E96;
+      --hot:#FF63BC;
+      --deep:#A50E63;
+      --cream:#FBF7F5;
+      --muted:#756b70;
+      --line:#e8dfe4;
+    }
+
+    * { box-sizing:border-box; }
+
+    body {
+      margin:0;
+      min-height:100vh;
+      padding:30px 20px;
+      background:
+        radial-gradient(circle at 80% 10%,rgba(238,46,150,.15),transparent 35%),
+        var(--cream);
+      color:var(--noir);
+      font-family:Inter,sans-serif;
+    }
+
+    .shell {
+      width:min(100%,720px);
+      margin:auto;
+    }
+
+    .brand {
+      text-align:center;
+      margin-bottom:25px;
+    }
+
+    .brand img {
+      width:85px;
+      height:85px;
+      object-fit:cover;
+      border-radius:50%;
+      border:3px solid var(--pink);
+      margin-bottom:12px;
+    }
+
+    .eyebrow {
+      font:500 11px Oswald,sans-serif;
+      text-transform:uppercase;
+      letter-spacing:.18em;
+      color:var(--deep);
+      margin-bottom:9px;
+    }
+
+    h1 {
+      font:600 34px "Playfair Display",serif;
+      margin:0 0 8px;
+    }
+
+    .muted {
+      color:var(--muted);
+      line-height:1.6;
+      font-size:14px;
+    }
+
+    .card {
+      background:white;
+      border:1px solid var(--line);
+      border-radius:18px;
+      padding:30px;
+      box-shadow:0 15px 50px rgba(13,7,9,.09);
+    }
+
+    label {
+      display:block;
+      margin-bottom:17px;
+      font:500 11px Oswald,sans-serif;
+      text-transform:uppercase;
+      letter-spacing:.08em;
+    }
+
+    input,select,textarea {
+      display:block;
+      width:100%;
+      margin-top:7px;
+      padding:13px 14px;
+      border:1px solid #d9cfd5;
+      border-radius:10px;
+      background:white;
+      color:var(--noir);
+      font:14px Inter,sans-serif;
+      outline:none;
+    }
+
+    input:focus,select:focus,textarea:focus {
+      border-color:var(--pink);
+      box-shadow:0 0 0 3px rgba(238,46,150,.1);
+    }
+
+    .two {
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:14px;
+    }
+
+    button {
+      width:100%;
+      border:0;
+      border-radius:999px;
+      padding:14px;
+      background:linear-gradient(135deg,var(--hot),var(--deep));
+      color:white;
+      font:500 12px Oswald,sans-serif;
+      text-transform:uppercase;
+      letter-spacing:.08em;
+      cursor:pointer;
+    }
+
+    button:disabled {
+      opacity:.6;
+      cursor:not-allowed;
+    }
+
+    .success,.error {
+      margin-top:15px;
+      padding:13px;
+      border-radius:10px;
+      font-size:13px;
+      line-height:1.5;
+    }
+
+    .success {
+      background:#eaf8ef;
+      color:#216a3b;
+    }
+
+    .error {
+      background:#fbe8ec;
+      color:#8c2336;
+    }
+
+    .back {
+      display:block;
+      width:max-content;
+      margin:20px auto 0;
+      color:var(--deep);
+      font:500 11px Oswald,sans-serif;
+      text-transform:uppercase;
+      letter-spacing:.08em;
+    }
+
+    @media(max-width:600px) {
+      .two {
+        grid-template-columns:1fr;
+      }
+
+      .card {
+        padding:22px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<main class="shell">
+
+  <section class="brand">
+
+    <img
+      src="1786871408756.jpg"
+      alt="Quianna Thomas">
+
+    <div class="eyebrow">Appointments</div>
+
+    <h1>Request your appointment</h1>
+
+    <p class="muted">
+      Submit your request below. Your appointment is not confirmed
+      until Quianna reviews and accepts the request.
+    </p>
+
+  </section>
+
+  <form id="bookingForm" class="card">
+
+    <label>
+      Full Name
+      <input
+        name="customer_name"
+        required
+        autocomplete="name"
+        placeholder="Your full name">
+    </label>
+
+    <label>
+      Phone
+      <input
+        name="phone"
+        required
+        autocomplete="tel"
+        placeholder="Phone number">
+    </label>
+
+    <label>
+      Email
+      <input
+        name="email"
+        type="email"
+        autocomplete="email"
+        placeholder="Email address">
+    </label>
+
+    <label>
+      Service
+
+      <select name="service" required>
+
+        <option value="">
+          Choose a service
+        </option>
+
+        <option>Knotless Braids — $120</option>
+        <option>Retwist — $70</option>
+        <option>Locs — $100</option>
+        <option>Dreads — $100</option>
+        <option>Wick — $150</option>
+        <option>Wig Install — $100</option>
+        <option>Ponytail — $80</option>
+        <option>Quick Weave — $90</option>
+        <option>Sew-In — $120</option>
+
+      </select>
+
+    </label>
+
+    <div class="two">
+
+      <label>
+        Appointment Date
+        <input
+          name="appointment_date"
+          type="date"
+          required>
+      </label>
+
+      <label>
+        Preferred Time
+        <input
+          name="appointment_time"
+          type="time"
+          required>
+      </label>
+
+    </div>
+
+    <label>
+      Notes
+      <textarea
+        name="notes"
+        rows="4"
+        placeholder="Anything Quianna should know?"></textarea>
+    </label>
+
+    <button id="bookingButton" type="submit">
+      Send Booking Request
+    </button>
+
+    <div id="bookingSuccess" class="success" hidden>
+      Your appointment request has been sent successfully.
+      Quianna will review your request.
+    </div>
+
+    <div id="bookingError" class="error" hidden></div>
+
+  </form>
+
+  <a class="back" href="index.html">
+    ← Back to website
+  </a>
+
+</main>
+
+<script src="script.js"></script>
+
+</body>
+</html>
