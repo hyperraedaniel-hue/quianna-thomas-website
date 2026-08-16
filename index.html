@@ -1,0 +1,2937 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Quianna Thomas | Professional Hairstylist</title>
+
+<meta name="description" content="Quianna Thomas is a professional hairstylist offering knotless braids, loc care, wig installs, sew-ins, quick weaves, ponytails and more. Now booking appointments.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Oswald:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+  --noir:#0D0709;
+  --noir-soft:#1A0F14;
+  --pink:#EE2E96;
+  --pink-hot:#FF63BC;
+  --pink-deep:#A50E63;
+  --cream:#FBF7F5;
+  --cream-dim:#EFE3E9;
+  --white:#ffffff;
+  --line:rgba(251,247,245,.14);
+  --line-dark:rgba(13,7,9,.13);
+}
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  background:var(--cream);
+  color:var(--noir);
+  font-family:'Inter',sans-serif;
+  overflow-x:hidden;
+}
+
+img{
+  max-width:100%;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+button{
+  font-family:inherit;
+}
+
+h1,h2,h3{
+  font-family:'Playfair Display',serif;
+}
+
+.script{
+  font-family:'Alex Brush',cursive;
+}
+
+.caps{
+  font-family:'Oswald',sans-serif;
+  text-transform:uppercase;
+}
+
+.wrap{
+  max-width:1160px;
+  margin:0 auto;
+  padding-left:32px;
+  padding-right:32px;
+}
+
+
+/* =========================================
+   TOP ANNOUNCEMENT
+========================================= */
+
+.deposit-banner{
+  background:linear-gradient(
+    100deg,
+    var(--pink-deep),
+    var(--pink) 60%,
+    var(--pink-hot)
+  );
+
+  color:var(--cream);
+  text-align:center;
+  padding:15px 20px;
+
+  font-family:'Oswald',sans-serif;
+  font-size:13px;
+  letter-spacing:.06em;
+}
+
+.deposit-banner b{
+  font-weight:600;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+header{
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+
+  z-index:100;
+
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+
+  padding:18px 32px;
+
+  transition:
+    background .35s ease,
+    padding .35s ease,
+    border-color .35s ease;
+
+  border-bottom:1px solid transparent;
+}
+
+header.scrolled{
+  background:rgba(251,247,245,.94);
+  backdrop-filter:blur(12px);
+
+  padding:10px 32px;
+
+  border-bottom:1px solid var(--line-dark);
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.brand-logo{
+  width:48px;
+  height:48px;
+
+  border-radius:50%;
+
+  object-fit:cover;
+
+  border:2px solid rgba(255,99,188,.7);
+
+  box-shadow:
+    0 4px 18px rgba(0,0,0,.25);
+}
+
+.brand-text{
+  display:flex;
+  flex-direction:column;
+  line-height:1.1;
+}
+
+.brand-text .name{
+  font-family:'Playfair Display',serif;
+  font-size:17px;
+  font-weight:600;
+}
+
+.brand-text .sub{
+  font-family:'Oswald',sans-serif;
+  font-size:9px;
+  letter-spacing:2.5px;
+  opacity:.55;
+  margin-top:3px;
+}
+
+nav{
+  display:flex;
+  gap:32px;
+
+  font-family:'Oswald',sans-serif;
+  font-size:12px;
+
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+
+nav a{
+  position:relative;
+  padding-bottom:4px;
+  opacity:.85;
+
+  transition:
+    color .2s ease,
+    opacity .2s ease;
+}
+
+nav a:hover{
+  opacity:1;
+  color:var(--pink-deep);
+}
+
+.book-btn{
+  background:linear-gradient(
+    135deg,
+    var(--pink-hot),
+    var(--pink-deep)
+  );
+
+  color:var(--cream);
+
+  padding:10px 22px;
+
+  border-radius:999px;
+
+  font-family:'Oswald',sans-serif;
+  font-size:12px;
+
+  letter-spacing:.08em;
+  text-transform:uppercase;
+
+  box-shadow:
+    0 6px 18px rgba(165,14,99,.35);
+
+  transition:
+    transform .25s ease,
+    box-shadow .25s ease;
+}
+
+.book-btn:hover{
+  transform:translateY(-2px);
+
+  box-shadow:
+    0 10px 24px rgba(165,14,99,.45);
+}
+
+
+/* =========================================
+   STATUS BADGE
+========================================= */
+
+.status-badge{
+  position:fixed;
+
+  top:96px;
+  right:32px;
+
+  z-index:90;
+
+  background:var(--noir);
+  color:var(--pink-hot);
+
+  font-family:'Oswald',sans-serif;
+  font-size:10px;
+
+  letter-spacing:.14em;
+  text-transform:uppercase;
+
+  padding:8px 16px;
+
+  border-radius:999px;
+
+  border:1px solid rgba(238,46,150,.5);
+
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+
+.status-badge .pulse{
+  width:6px;
+  height:6px;
+
+  border-radius:50%;
+
+  background:var(--pink-hot);
+
+  animation:pulse 1.8s infinite;
+}
+
+@keyframes pulse{
+
+  0%{
+    box-shadow:0 0 0 0 rgba(255,99,188,.55);
+  }
+
+  70%{
+    box-shadow:0 0 0 8px rgba(255,99,188,0);
+  }
+
+  100%{
+    box-shadow:0 0 0 0 rgba(255,99,188,0);
+  }
+
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero{
+  position:relative;
+
+  min-height:100svh;
+
+  overflow:hidden;
+
+  background:var(--noir);
+}
+
+.hero-glow{
+  position:absolute;
+  inset:0;
+
+  background:
+    radial-gradient(
+      52% 45% at 82% 12%,
+      rgba(238,46,150,.38),
+      transparent 60%
+    ),
+
+    radial-gradient(
+      46% 38% at 8% 88%,
+      rgba(165,14,99,.32),
+      transparent 60%
+    ),
+
+    var(--noir);
+}
+
+.hero-swoosh{
+  position:absolute;
+  inset:0;
+
+  width:100%;
+  height:100%;
+
+  opacity:.9;
+}
+
+.hero-content{
+  position:relative;
+
+  z-index:3;
+
+  min-height:100svh;
+
+  display:flex;
+  align-items:center;
+
+  padding-top:130px;
+  padding-bottom:100px;
+}
+
+.hero-card{
+  max-width:680px;
+}
+
+.hero-eyebrow{
+  font-family:'Oswald',sans-serif;
+
+  font-size:12px;
+
+  letter-spacing:.24em;
+
+  text-transform:uppercase;
+
+  color:var(--pink-hot);
+
+  margin-bottom:18px;
+}
+
+.hero h1{
+  color:var(--cream);
+
+  font-size:clamp(
+    30px,
+    4.4vw,
+    48px
+  );
+
+  line-height:1.15;
+
+  font-weight:600;
+}
+
+.hero .script-line{
+  display:block;
+
+  font-family:'Alex Brush',cursive;
+
+  font-size:clamp(
+    70px,
+    12vw,
+    140px
+  );
+
+  line-height:.9;
+
+  background:
+    linear-gradient(
+      120deg,
+      var(--cream) 0%,
+      var(--pink-hot) 55%,
+      var(--pink-deep) 100%
+    );
+
+  -webkit-background-clip:text;
+  background-clip:text;
+
+  color:transparent;
+
+  margin:6px 0 10px;
+}
+
+.hero-sub{
+  max-width:520px;
+
+  margin-top:20px;
+
+  font-size:15.5px;
+
+  line-height:1.75;
+
+  color:var(--cream);
+
+  opacity:.74;
+}
+
+.hero-cta{
+  display:flex;
+
+  gap:14px;
+
+  margin-top:32px;
+
+  flex-wrap:wrap;
+}
+
+.btn-primary{
+  background:
+    linear-gradient(
+      135deg,
+      var(--pink-hot),
+      var(--pink-deep)
+    );
+
+  color:var(--cream);
+
+  padding:15px 28px;
+
+  border-radius:999px;
+
+  font-family:'Oswald',sans-serif;
+
+  font-size:13px;
+
+  letter-spacing:.06em;
+
+  text-transform:uppercase;
+
+  display:inline-flex;
+
+  align-items:center;
+  justify-content:center;
+
+  gap:10px;
+
+  box-shadow:
+    0 8px 22px rgba(165,14,99,.4);
+
+  transition:
+    transform .25s ease,
+    box-shadow .25s ease;
+}
+
+.btn-primary:hover{
+  transform:translateY(-2px);
+
+  box-shadow:
+    0 12px 28px rgba(165,14,99,.5);
+}
+
+.btn-ghost{
+  border:1px solid rgba(251,247,245,.32);
+
+  color:var(--cream);
+
+  padding:15px 28px;
+
+  border-radius:999px;
+
+  font-family:'Oswald',sans-serif;
+
+  font-size:13px;
+
+  letter-spacing:.06em;
+
+  text-transform:uppercase;
+
+  transition:
+    border-color .25s ease,
+    background .25s ease;
+}
+
+.btn-ghost:hover{
+  border-color:var(--cream);
+  background:rgba(251,247,245,.08);
+}
+
+
+/* =========================================
+   MARQUEE
+========================================= */
+
+.marquee{
+  border-top:1px solid var(--line-dark);
+  border-bottom:1px solid var(--line-dark);
+
+  padding:14px 0;
+
+  overflow:hidden;
+  white-space:nowrap;
+
+  background:var(--noir);
+  color:var(--cream);
+}
+
+.marquee-track{
+  display:inline-block;
+
+  animation:
+    scroll-left 28s linear infinite;
+
+  font-family:'Oswald',sans-serif;
+
+  font-size:12px;
+
+  letter-spacing:.14em;
+
+  text-transform:uppercase;
+}
+
+.marquee-track span{
+  margin:0 30px;
+  opacity:.85;
+}
+
+.marquee-track span::after{
+  content:'✦';
+
+  margin-left:30px;
+
+  color:var(--pink-hot);
+}
+
+@keyframes scroll-left{
+
+  from{
+    transform:translateX(0);
+  }
+
+  to{
+    transform:translateX(-50%);
+  }
+
+}
+
+
+/* =========================================
+   GENERAL SECTIONS
+========================================= */
+
+section{
+  padding:110px 0;
+}
+
+.section-head{
+  display:flex;
+
+  justify-content:space-between;
+  align-items:flex-end;
+
+  gap:24px;
+
+  margin-bottom:52px;
+
+  flex-wrap:wrap;
+}
+
+.section-eyebrow{
+  font-family:'Oswald',sans-serif;
+
+  font-size:12px;
+
+  letter-spacing:.2em;
+
+  text-transform:uppercase;
+
+  color:var(--pink-deep);
+
+  margin-bottom:12px;
+}
+
+.section-head h2{
+  font-size:clamp(
+    28px,
+    4.2vw,
+    44px
+  );
+}
+
+.section-head p{
+  max-width:330px;
+
+  font-size:14px;
+
+  opacity:.6;
+
+  line-height:1.7;
+}
+
+
+/* =========================================
+   ABOUT
+========================================= */
+
+.about{
+  display:grid;
+
+  grid-template-columns:
+    .85fr 1.15fr;
+
+  gap:64px;
+
+  align-items:center;
+}
+
+.about-photo{
+  aspect-ratio:4/5;
+
+  border-radius:12px;
+
+  position:relative;
+
+  overflow:hidden;
+
+  background:var(--noir);
+
+  box-shadow:
+    0 24px 70px rgba(13,7,9,.18);
+}
+
+.about-photo img{
+  width:100%;
+  height:100%;
+
+  object-fit:cover;
+
+  object-position:center;
+
+  display:block;
+}
+
+.about-photo::after{
+  content:'';
+
+  position:absolute;
+
+  inset:0;
+
+  background:
+    linear-gradient(
+      180deg,
+      transparent 55%,
+      rgba(13,7,9,.82) 100%
+    );
+}
+
+.about-photo .tag{
+  position:absolute;
+
+  z-index:2;
+
+  left:24px;
+  right:24px;
+  bottom:20px;
+
+  font-family:'Oswald',sans-serif;
+
+  font-size:11px;
+
+  letter-spacing:.1em;
+
+  text-transform:uppercase;
+
+  color:var(--cream);
+
+  opacity:.9;
+}
+
+.about-copy p{
+  font-size:16px;
+
+  line-height:1.75;
+
+  opacity:.78;
+
+  margin-bottom:20px;
+}
+
+.about-copy p:first-child{
+  font-family:'Alex Brush',cursive;
+
+  font-size:38px;
+
+  line-height:1.3;
+
+  opacity:1;
+
+  color:var(--pink-deep);
+}
+
+.stat-row{
+  display:flex;
+
+  gap:44px;
+
+  margin-top:30px;
+
+  padding-top:26px;
+
+  border-top:1px solid var(--line-dark);
+
+  flex-wrap:wrap;
+}
+
+.stat h3{
+  font-size:30px;
+
+  color:var(--pink-deep);
+}
+
+.stat span{
+  font-family:'Oswald',sans-serif;
+
+  font-size:10px;
+
+  letter-spacing:.08em;
+
+  opacity:.6;
+
+  text-transform:uppercase;
+}
+
+
+/* =========================================
+   SERVICES
+========================================= */
+
+.services{
+  background:var(--noir);
+
+  color:var(--cream);
+}
+
+.services .section-eyebrow{
+  color:var(--pink-hot);
+}
+
+.services .section-head p{
+  color:var(--cream);
+
+  opacity:.55;
+}
+
+.price-table{
+  border-top:1px solid var(--line);
+}
+
+.price-table-head{
+  display:grid;
+
+  grid-template-columns:
+    1fr auto auto;
+
+  gap:16px;
+
+  padding:0 0 16px;
+
+  font-family:'Oswald',sans-serif;
+
+  font-size:11px;
+
+  letter-spacing:.12em;
+
+  text-transform:uppercase;
+
+  opacity:.45;
+
+  text-align:right;
+}
+
+.price-table-head span:first-child{
+  text-align:left;
+}
+
+.service-row{
+  display:grid;
+
+  grid-template-columns:
+    1fr auto auto;
+
+  align-items:center;
+
+  gap:16px;
+
+  padding:22px 0;
+
+  border-bottom:1px solid var(--line);
+
+  transition:
+    padding-left .3s ease;
+}
+
+.service-row:hover{
+  padding-left:10px;
+}
+
+.service-row h3{
+  font-size:21px;
+
+  font-weight:600;
+}
+
+.service-row .price{
+  font-family:'Alex Brush',cursive;
+
+  font-size:28px;
+
+  color:var(--pink-hot);
+
+  text-align:right;
+}
+
+.service-row .deposit{
+  font-family:'Oswald',sans-serif;
+
+  font-size:12px;
+
+  letter-spacing:.04em;
+
+  opacity:.55;
+
+  text-align:right;
+
+  white-space:nowrap;
+}
+
+.price-table-foot{
+  margin-top:22px;
+
+  font-size:12.5px;
+
+  opacity:.6;
+
+  line-height:1.6;
+
+  border-top:1px solid var(--line);
+
+  padding-top:18px;
+}
+
+
+/* =========================================
+   PORTFOLIO
+========================================= */
+
+.portfolio{
+  background:var(--cream);
+}
+
+.portfolio-grid{
+  display:grid;
+
+  grid-template-columns:
+    repeat(4,1fr);
+
+  grid-auto-rows:190px;
+
+  gap:14px;
+}
+
+.portfolio-item{
+  position:relative;
+
+  overflow:hidden;
+
+  border-radius:10px;
+
+  background:var(--noir);
+
+  cursor:pointer;
+}
+
+.portfolio-item.large{
+  grid-column:span 2;
+  grid-row:span 2;
+}
+
+.portfolio-item.tall{
+  grid-row:span 2;
+}
+
+.portfolio-item.wide{
+  grid-column:span 2;
+}
+
+.portfolio-item img{
+  width:100%;
+  height:100%;
+
+  object-fit:cover;
+
+  display:block;
+
+  transition:
+    transform .6s ease;
+}
+
+.portfolio-item:hover img{
+  transform:scale(1.06);
+}
+
+.portfolio-overlay{
+  position:absolute;
+
+  inset:0;
+
+  display:flex;
+
+  align-items:flex-end;
+
+  padding:20px;
+
+  background:
+    linear-gradient(
+      180deg,
+      transparent 45%,
+      rgba(13,7,9,.8) 100%
+    );
+}
+
+.portfolio-overlay span{
+  color:var(--cream);
+
+  font-family:'Oswald',sans-serif;
+
+  font-size:12px;
+
+  letter-spacing:.06em;
+
+  text-transform:uppercase;
+
+  position:relative;
+
+  z-index:2;
+}
+
+.portfolio-note{
+  margin-top:22px;
+
+  font-family:'Oswald',sans-serif;
+
+  font-size:11px;
+
+  letter-spacing:.05em;
+
+  opacity:.5;
+}
+
+
+/* =========================================
+   VIDEO
+========================================= */
+
+.video-section{
+  background:
+    linear-gradient(
+      150deg,
+      #160A10,
+      var(--noir)
+    );
+
+  color:var(--cream);
+}
+
+.video-section .section-eyebrow{
+  color:var(--pink-hot);
+}
+
+.video-section .section-head p{
+  color:var(--cream);
+  opacity:.55;
+}
+
+.video-card{
+  display:grid;
+
+  grid-template-columns:
+    1.2fr .8fr;
+
+  background:
+    rgba(255,255,255,.035);
+
+  border:1px solid rgba(251,247,245,.1);
+
+  border-radius:14px;
+
+  overflow:hidden;
+
+  box-shadow:
+    0 30px 80px rgba(0,0,0,.25);
+}
+
+.video-wrapper{
+  background:#000;
+
+  min-height:500px;
+}
+
+.video-wrapper video{
+  width:100%;
+  height:100%;
+
+  min-height:500px;
+
+  display:block;
+
+  object-fit:cover;
+}
+
+.video-copy{
+  padding:55px 44px;
+
+  display:flex;
+
+  flex-direction:column;
+
+  justify-content:center;
+}
+
+.video-script{
+  font-family:'Alex Brush',cursive;
+
+  color:var(--pink-hot);
+
+  font-size:38px;
+
+  margin-bottom:8px;
+}
+
+.video-copy h3{
+  font-size:32px;
+
+  margin-bottom:18px;
+
+  color:var(--cream);
+}
+
+.video-copy p{
+  font-size:14px;
+
+  line-height:1.8;
+
+  color:var(--cream);
+
+  opacity:.68;
+
+  margin-bottom:28px;
+}
+
+.video-label{
+  display:inline-flex;
+
+  align-items:center;
+
+  gap:8px;
+
+  color:var(--pink-hot);
+
+  font-family:'Oswald',sans-serif;
+
+  font-size:11px;
+
+  letter-spacing:.12em;
+
+  text-transform:uppercase;
+}
+
+.video-label::before{
+  content:'';
+
+  width:7px;
+  height:7px;
+
+  border-radius:50%;
+
+  background:var(--pink-hot);
+
+  box-shadow:
+    0 0 14px rgba(255,99,188,.7);
+}
+
+
+/* =========================================
+   TESTIMONIAL
+========================================= */
+
+.testimonial{
+  text-align:center;
+
+  max-width:760px;
+
+  margin:0 auto;
+
+  padding:100px 32px;
+}
+
+.testimonial .quote-mark{
+  color:var(--pink-hot);
+
+  font-family:'Playfair Display',serif;
+
+  font-size:55px;
+
+  line-height:.5;
+
+  margin-bottom:25px;
+}
+
+.testimonial blockquote{
+  font-family:'Alex Brush',cursive;
+
+  font-size:clamp(
+    32px,
+    5vw,
+    50px
+  );
+
+  line-height:1.35;
+
+  color:var(--pink-deep);
+}
+
+.testimonial p{
+  margin-top:20px;
+
+  font-family:'Oswald',sans-serif;
+
+  font-size:11px;
+
+  letter-spacing:.1em;
+
+  opacity:.55;
+
+  text-transform:uppercase;
+}
+
+
+/* =========================================
+   BOOKING
+========================================= */
+
+.booking{
+  background:
+    linear-gradient(
+      160deg,
+      var(--noir-soft),
+      var(--noir)
+    );
+
+  color:var(--cream);
+
+  border-radius:14px;
+
+  overflow:hidden;
+
+  display:grid;
+
+  grid-template-columns:
+    1.1fr .9fr;
+
+  box-shadow:
+    0 30px 70px rgba(13,7,9,.16);
+}
+
+.booking-left{
+  padding:60px 48px;
+}
+
+.booking-left .section-eyebrow{
+  color:var(--pink-hot);
+}
+
+.booking-left h2{
+  font-size:clamp(
+    26px,
+    3.6vw,
+    40px
+  );
+
+  margin-bottom:14px;
+
+  color:var(--cream);
+}
+
+.booking-left p{
+  font-size:14px;
+
+  opacity:.68;
+
+  line-height:1.7;
+
+  max-width:440px;
+}
+
+.contact-list{
+  margin-top:30px;
+
+  display:flex;
+
+  flex-direction:column;
+
+  gap:16px;
+}
+
+.contact-item{
+  display:flex;
+
+  align-items:center;
+
+  gap:14px;
+
+  font-size:14.5px;
+}
+
+.contact-item .ic{
+  width:36px;
+  height:36px;
+
+  border-radius:50%;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--pink-hot),
+      var(--pink-deep)
+    );
+
+  display:flex;
+
+  align-items:center;
+  justify-content:center;
+
+  font-size:14px;
+
+  flex-shrink:0;
+}
+
+.contact-item a{
+  transition:color .2s ease;
+}
+
+.contact-item a:hover{
+  color:var(--pink-hot);
+}
+
+.booking-right{
+  background:rgba(251,247,245,.04);
+
+  padding:60px 40px;
+
+  display:flex;
+
+  flex-direction:column;
+
+  justify-content:space-between;
+
+  border-left:1px solid rgba(251,247,245,.1);
+}
+
+.booking-right .display{
+  font-family:'Alex Brush',cursive;
+
+  font-size:34px;
+
+  color:var(--pink-hot);
+
+  margin-bottom:12px;
+}
+
+.booking-right p{
+  font-size:13px;
+
+  opacity:.6;
+
+  line-height:1.6;
+
+  margin-bottom:22px;
+}
+
+.hours{
+  font-family:'Oswald',sans-serif;
+
+  font-size:12px;
+
+  opacity:.75;
+
+  display:flex;
+
+  justify-content:space-between;
+
+  padding:11px 0;
+
+  border-bottom:1px dashed rgba(251,247,245,.16);
+}
+
+.hours:last-of-type{
+  border-bottom:none;
+}
+
+.deposit-note{
+  margin-top:22px;
+
+  font-size:11.5px;
+
+  opacity:.6;
+
+  line-height:1.6;
+
+  border-top:1px solid var(--line);
+
+  padding-top:16px;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer{
+  padding:50px 32px 40px;
+
+  text-align:center;
+
+  font-family:'Oswald',sans-serif;
+
+  font-size:11px;
+
+  opacity:.5;
+
+  border-top:1px solid var(--line-dark);
+
+  letter-spacing:.08em;
+
+  text-transform:uppercase;
+}
+
+.footer-brand{
+  display:flex;
+
+  justify-content:center;
+
+  align-items:center;
+
+  gap:12px;
+
+  margin-bottom:12px;
+}
+
+.footer-brand img{
+  width:38px;
+  height:38px;
+
+  object-fit:cover;
+
+  border-radius:50%;
+}
+
+.footer-brand span{
+  font-family:'Playfair Display',serif;
+
+  font-size:16px;
+
+  opacity:.9;
+
+  letter-spacing:.02em;
+
+  text-transform:none;
+}
+
+.owner-login{
+  display:inline-block;
+  margin-top:18px;
+  color:var(--pink-deep);
+  text-decoration:underline;
+  text-underline-offset:4px;
+  opacity:.8;
+  transition:opacity .2s ease;
+}
+
+.owner-login:hover{
+  opacity:1;
+}
+
+
+/* =========================================
+   LIGHTBOX
+========================================= */
+
+.lightbox{
+  position:fixed;
+
+  inset:0;
+
+  z-index:999;
+
+  background:rgba(0,0,0,.92);
+
+  display:none;
+
+  align-items:center;
+
+  justify-content:center;
+
+  padding:30px;
+}
+
+.lightbox.active{
+  display:flex;
+}
+
+.lightbox img{
+  max-width:95vw;
+  max-height:90vh;
+
+  object-fit:contain;
+
+  border-radius:8px;
+
+  box-shadow:
+    0 20px 80px rgba(0,0,0,.5);
+}
+
+.lightbox-close{
+  position:absolute;
+
+  top:20px;
+  right:25px;
+
+  width:42px;
+  height:42px;
+
+  border-radius:50%;
+
+  border:1px solid rgba(255,255,255,.3);
+
+  background:rgba(255,255,255,.08);
+
+  color:#fff;
+
+  font-size:25px;
+
+  cursor:pointer;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media(max-width:860px){
+
+  nav,
+  header .book-btn{
+    display:none;
+  }
+
+  header{
+    padding:12px 18px;
+  }
+
+  header.scrolled{
+    padding:9px 18px;
+  }
+
+  .brand-logo{
+    width:42px;
+    height:42px;
+  }
+
+  .brand-text .name{
+    font-size:15px;
+  }
+
+  .brand-text .sub{
+    font-size:8px;
+    letter-spacing:2px;
+  }
+
+  .status-badge{
+    top:72px;
+    right:16px;
+
+    font-size:9px;
+
+    padding:7px 12px;
+  }
+
+  .hero-content{
+    padding-top:145px;
+    padding-bottom:80px;
+  }
+
+  .hero-sub{
+    font-size:14px;
+  }
+
+  .about{
+    grid-template-columns:1fr;
+
+    gap:42px;
+  }
+
+  .about-photo{
+    max-width:560px;
+    margin:0 auto;
+  }
+
+  .booking{
+    grid-template-columns:1fr;
+  }
+
+  .booking-right{
+    border-left:none;
+
+    border-top:1px solid rgba(251,247,245,.1);
+  }
+
+  .video-card{
+    grid-template-columns:1fr;
+  }
+
+  .video-wrapper,
+  .video-wrapper video{
+    min-height:auto;
+
+    height:auto;
+  }
+
+  .video-wrapper video{
+    aspect-ratio:9/16;
+  }
+
+  .video-copy{
+    padding:42px 30px;
+  }
+
+  .portfolio-grid{
+    grid-template-columns:repeat(2,1fr);
+
+    grid-auto-rows:170px;
+  }
+
+  .portfolio-item.large{
+    grid-column:span 2;
+    grid-row:span 2;
+  }
+
+  .portfolio-item.tall{
+    grid-row:span 2;
+  }
+
+  .portfolio-item.wide{
+    grid-column:span 2;
+  }
+
+  .service-row{
+    gap:8px;
+
+    padding:17px 0;
+  }
+
+  .service-row h3{
+    font-size:17px;
+  }
+
+  .service-row .price{
+    font-size:23px;
+  }
+
+  .service-row .deposit{
+    font-size:10px;
+  }
+
+}
+
+
+@media(max-width:560px){
+
+  .wrap{
+    padding-left:20px;
+    padding-right:20px;
+  }
+
+  section{
+    padding:80px 0;
+  }
+
+  .deposit-banner{
+    font-size:11px;
+    padding:12px 15px;
+  }
+
+  .hero h1{
+    font-size:31px;
+  }
+
+  .hero .script-line{
+    font-size:78px;
+  }
+
+  .hero-cta{
+    flex-direction:column;
+  }
+
+  .btn-primary,
+  .btn-ghost{
+    width:100%;
+    text-align:center;
+  }
+
+  .about-copy p:first-child{
+    font-size:32px;
+  }
+
+  .stat-row{
+    gap:25px;
+  }
+
+  .stat h3{
+    font-size:26px;
+  }
+
+  .portfolio-grid{
+    grid-template-columns:1fr 1fr;
+
+    grid-auto-rows:135px;
+
+    gap:9px;
+  }
+
+  .portfolio-item.large{
+    grid-column:span 2;
+    grid-row:span 2;
+  }
+
+  .portfolio-item.tall{
+    grid-row:span 2;
+  }
+
+  .portfolio-item.wide{
+    grid-column:span 2;
+  }
+
+  .portfolio-overlay{
+    padding:12px;
+  }
+
+  .portfolio-overlay span{
+    font-size:9px;
+  }
+
+  .price-table-head{
+    grid-template-columns:
+      1fr auto auto;
+
+    font-size:8px;
+  }
+
+  .service-row{
+    grid-template-columns:
+      1fr auto;
+
+    position:relative;
+
+    padding-right:0;
+  }
+
+  .service-row h3{
+    font-size:15px;
+  }
+
+  .service-row .price{
+    font-size:21px;
+  }
+
+  .service-row .deposit{
+    grid-column:1 / -1;
+
+    text-align:left;
+
+    margin-top:-5px;
+  }
+
+  .booking-left,
+  .booking-right{
+    padding:40px 25px;
+  }
+
+  .video-copy h3{
+    font-size:28px;
+  }
+
+  .testimonial{
+    padding:75px 25px;
+  }
+
+}
+
+
+/* =========================================
+   ACCESSIBILITY
+========================================= */
+
+@media(prefers-reduced-motion:reduce){
+
+  html{
+    scroll-behavior:auto;
+  }
+
+  *,
+  *::before,
+  *::after{
+    animation-duration:.01ms !important;
+    animation-iteration-count:1 !important;
+    transition-duration:.01ms !important;
+  }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =====================================
+     ANNOUNCEMENT
+===================================== -->
+
+<div class="deposit-banner">
+  ✦ Appointments are open —
+  <b>deposit required to secure your appointment</b> ✦
+</div>
+
+
+<!-- =====================================
+     HEADER
+===================================== -->
+
+<header id="siteHeader">
+
+  <a href="#top" class="brand">
+
+    <img
+      class="brand-logo"
+      src="1786871408756.jpg"
+      alt="Quianna Thomas"
+    >
+
+    <div class="brand-text">
+
+      <span class="name">
+        Quianna Thomas
+      </span>
+
+      <span class="sub">
+        PROFESSIONAL HAIRSTYLIST
+      </span>
+
+    </div>
+
+  </a>
+
+
+  <nav>
+
+    <a href="#about">
+      About
+    </a>
+
+    <a href="#services">
+      Services
+    </a>
+
+    <a href="#portfolio">
+      Portfolio
+    </a>
+
+    <a href="#video">
+      Video
+    </a>
+
+    <a href="#book">
+      Book
+    </a>
+
+  </nav>
+
+
+  <!-- UPDATED: goes to booking system -->
+
+  <a
+    href="booking.html"
+    class="book-btn"
+  >
+    Book Now
+  </a>
+
+</header>
+
+
+<!-- =====================================
+     STATUS
+===================================== -->
+
+<div class="status-badge">
+
+  <span class="pulse"></span>
+
+  Always Open
+
+</div>
+
+
+<!-- =====================================
+     HERO
+===================================== -->
+
+<section
+  class="hero"
+  id="top"
+>
+
+  <div class="hero-glow"></div>
+
+
+  <svg
+    class="hero-swoosh"
+    viewBox="0 0 1200 900"
+    preserveAspectRatio="xMidYMid slice"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+
+    <path
+      d="M-50 120 C250 20 500 220 850 60 C1000 -10 1150 40 1250 -20"
+      stroke="#EE2E96"
+      stroke-opacity=".28"
+      stroke-width="90"
+      fill="none"
+      stroke-linecap="round"
+    />
+
+    <path
+      d="M-80 800 C220 900 480 700 800 860 C980 940 1150 860 1260 900"
+      stroke="#A50E63"
+      stroke-opacity=".22"
+      stroke-width="70"
+      fill="none"
+      stroke-linecap="round"
+    />
+
+  </svg>
+
+
+  <div class="hero-content wrap">
+
+    <div class="hero-card">
+
+      <div class="hero-eyebrow">
+        ✦ Appointments Are Open · Now Booking
+      </div>
+
+
+      <h1>
+        Book the chair that treats your
+      </h1>
+
+
+      <span class="script-line">
+        Hairstylist
+      </span>
+
+
+      <p class="hero-sub">
+
+        A professional hairstylist who takes pride
+        in every style — knotless, boho and Fulani
+        braids, loc care, wig installs, sew-ins,
+        quick weaves, ponytails and more.
+
+      </p>
+
+
+      <div class="hero-cta">
+
+        <!-- UPDATED -->
+
+        <a
+          href="booking.html"
+          class="btn-primary"
+        >
+          Book an Appointment →
+        </a>
+
+        <a
+          href="#portfolio"
+          class="btn-ghost"
+        >
+          See the Work
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================
+     SERVICE MARQUEE
+===================================== -->
+
+<div class="marquee">
+
+  <div class="marquee-track">
+
+    <span>KNOTLESS BRAIDS</span>
+    <span>SEW-IN</span>
+    <span>WIG INSTALL</span>
+    <span>LOC RETWIST</span>
+    <span>QUICK WEAVE</span>
+    <span>LOCS</span>
+    <span>PONYTAIL</span>
+
+    <span>KNOTLESS BRAIDS</span>
+    <span>SEW-IN</span>
+    <span>WIG INSTALL</span>
+    <span>LOC RETWIST</span>
+    <span>QUICK WEAVE</span>
+    <span>LOCS</span>
+    <span>PONYTAIL</span>
+
+  </div>
+
+</div>
+
+
+<!-- =====================================
+     ABOUT
+===================================== -->
+
+<section
+  class="about wrap"
+  id="about"
+>
+
+  <div class="about-photo">
+
+    <img
+      src="1786871408756.jpg"
+      alt="Quianna Thomas professional hairstylist"
+    >
+
+    <span class="tag">
+      Quianna Thomas — Professional Hairstylist
+    </span>
+
+  </div>
+
+
+  <div class="about-copy">
+
+    <p>
+      A professional hairstylist who takes pride
+      in every style.
+    </p>
+
+
+    <p>
+
+      Quianna brings a client-first approach to
+      every appointment, creating beautiful styles
+      with care, precision and attention to detail.
+
+    </p>
+
+
+    <p>
+
+      From protective styles and braids to loc care,
+      installs and custom looks, every appointment
+      is about helping you leave feeling confident
+      and looking your best.
+
+    </p>
+
+
+    <div class="stat-row">
+
+      <div class="stat">
+
+        <h3>
+          1.3K+
+        </h3>
+
+        <span>
+          Followers &amp; growing
+        </span>
+
+      </div>
+
+
+      <div class="stat">
+
+        <h3>
+          Always
+        </h3>
+
+        <span>
+          Open for booking
+        </span>
+
+      </div>
+
+
+      <div class="stat">
+
+        <h3>
+          5★
+        </h3>
+
+        <span>
+          Client experience
+        </span>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================
+     SERVICES
+===================================== -->
+
+<section
+  class="services"
+  id="services"
+>
+
+  <div class="wrap">
+
+    <div class="section-head">
+
+      <div>
+
+        <div class="section-eyebrow">
+          ✦ Menu
+        </div>
+
+        <h2>
+          Services &amp; Pricing
+        </h2>
+
+      </div>
+
+
+      <p>
+
+        Deposit is due to book —
+        balance is settled the day
+        of your appointment.
+
+      </p>
+
+    </div>
+
+
+    <div class="price-table">
+
+
+      <div class="price-table-head">
+
+        <span>
+          Style
+        </span>
+
+        <span>
+          Price
+        </span>
+
+        <span>
+          Deposit
+        </span>
+
+      </div>
+
+
+      <div class="service-row">
+        <h3>Knotless Braids</h3>
+        <div class="price">$120</div>
+        <div class="deposit">$40 deposit</div>
+      </div>
+
+
+      <div class="service-row">
+        <h3>Retwist</h3>
+        <div class="price">$70</div>
+        <div class="deposit">$25 deposit</div>
+      </div>
+
+
+      <div class="service-row">
+        <h3>Locs</h3>
+        <div class="price">$100</div>
+        <div class="deposit">$30 deposit</div>
+      </div>
+
+
+      <div class="service-row">
+        <h3>Dreads</h3>
+        <div class="price">$100</div>
+        <div class="deposit">$30 deposit</div>
+      </div>
+
+
+      <div class="service-row">
+        <h3>Wick</h3>
+        <div class="price">$150</div>
+        <div class="deposit">$50 deposit</div>
+      </div>
+
+
+      <div class="service-row">
+        <h3>Wig Install</h3>
+        <div class="price">$100</div>
+        <div class="deposit">$30 deposit</div>
+      </div>
+
+
+      <div class="service-row">
+        <h3>Ponytail</h3>
+        <div class="price">$80</div>
+        <div class="deposit">$25 deposit</div>
+      </div>
+
+
+      <div class="service-row">
+        <h3>Quick Weave</h3>
+        <div class="price">$90</div>
+        <div class="deposit">$30 deposit</div>
+      </div>
+
+
+      <div class="service-row">
+        <h3>Sew-In</h3>
+        <div class="price">$120</div>
+        <div class="deposit">$40 deposit</div>
+      </div>
+
+
+      <div class="price-table-foot">
+
+        ✦ Deposit is required to secure the appointment.
+        Remaining balance is due the day of service.
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================
+     PORTFOLIO
+===================================== -->
+
+<section
+  class="portfolio"
+  id="portfolio"
+>
+
+  <div class="wrap">
+
+    <div class="section-head">
+
+      <div>
+
+        <div class="section-eyebrow">
+          ✦ Recent Work
+        </div>
+
+        <h2>
+          Work from the chair
+        </h2>
+
+      </div>
+
+
+      <p>
+        A collection of Quianna's recent
+        hairstyles and client work.
+      </p>
+
+    </div>
+
+
+    <div class="portfolio-grid">
+
+
+      <div
+        class="portfolio-item large"
+        data-image="1786872123292.jpg"
+      >
+        <img
+          src="1786872123292.jpg"
+          alt="Quianna Thomas client hairstyle"
+          loading="lazy"
+        >
+
+        <div class="portfolio-overlay">
+          <span>Recent Client Work</span>
+        </div>
+      </div>
+
+
+      <div
+        class="portfolio-item"
+        data-image="1786872462138.jpg"
+      >
+        <img
+          src="1786872462138.jpg"
+          alt="Quianna Thomas hairstyle"
+          loading="lazy"
+        >
+
+        <div class="portfolio-overlay">
+          <span>Hairstyle</span>
+        </div>
+      </div>
+
+
+      <div
+        class="portfolio-item tall"
+        data-image="1786874546502.jpg"
+      >
+        <img
+          src="1786874546502.jpg"
+          alt="Quianna Thomas client hairstyle"
+          loading="lazy"
+        >
+
+        <div class="portfolio-overlay">
+          <span>Client Work</span>
+        </div>
+      </div>
+
+
+      <div
+        class="portfolio-item"
+        data-image="1786874549989.jpg"
+      >
+        <img
+          src="1786874549989.jpg"
+          alt="Quianna Thomas hairstyle"
+          loading="lazy"
+        >
+
+        <div class="portfolio-overlay">
+          <span>Hairstyle</span>
+        </div>
+      </div>
+
+
+      <div
+        class="portfolio-item wide"
+        data-image="1786874554474.jpg"
+      >
+        <img
+          src="1786874554474.jpg"
+          alt="Quianna Thomas recent work"
+          loading="lazy"
+        >
+
+        <div class="portfolio-overlay">
+          <span>Recent Work</span>
+        </div>
+      </div>
+
+
+      <div
+        class="portfolio-item"
+        data-image="1786874557932.jpg"
+      >
+        <img
+          src="1786874557932.jpg"
+          alt="Quianna Thomas client style"
+          loading="lazy"
+        >
+
+        <div class="portfolio-overlay">
+          <span>Client Style</span>
+        </div>
+      </div>
+
+
+      <div
+        class="portfolio-item"
+        data-image="1786874561620.jpg"
+      >
+        <img
+          src="1786874561620.jpg"
+          alt="Quianna Thomas hairstyle"
+          loading="lazy"
+        >
+
+        <div class="portfolio-overlay">
+          <span>Hairstyle</span>
+        </div>
+      </div>
+
+
+      <div
+        class="portfolio-item tall"
+        data-image="1786874564667.jpg"
+      >
+        <img
+          src="1786874564667.jpg"
+          alt="Quianna Thomas client work"
+          loading="lazy"
+        >
+
+        <div class="portfolio-overlay">
+          <span>Client Work</span>
+        </div>
+      </div>
+
+
+      <div
+        class="portfolio-item"
+        data-image="1786874568170.jpg"
+      >
+        <img
+          src="1786874568170.jpg"
+          alt="Quianna Thomas hairstyle"
+          loading="lazy"
+        >
+
+        <div class="portfolio-overlay">
+          <span>Recent Work</span>
+        </div>
+      </div>
+
+
+      <div
+        class="portfolio-item"
+        data-image="1786874571053.jpg"
+      >
+        <img
+          src="1786874571053.jpg"
+          alt="Quianna Thomas client style"
+          loading="lazy"
+        >
+
+        <div class="portfolio-overlay">
+          <span>Client Style</span>
+        </div>
+      </div>
+
+
+      <div
+        class="portfolio-item wide"
+        data-image="1786874574576.jpg"
+      >
+        <img
+          src="1786874574576.jpg"
+          alt="Quianna Thomas recent hairstyle"
+          loading="lazy"
+        >
+
+        <div class="portfolio-overlay">
+          <span>Recent Work</span>
+        </div>
+      </div>
+
+
+    </div>
+
+
+    <div class="portfolio-note">
+      ✦ Tap any photo to view it larger.
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================
+     VIDEO
+===================================== -->
+
+<section
+  class="video-section"
+  id="video"
+>
+
+  <div class="wrap">
+
+    <div class="section-head">
+
+      <div>
+
+        <div class="section-eyebrow">
+          ✦ Behind The Chair
+        </div>
+
+        <h2>
+          A Day in the Chair
+        </h2>
+
+      </div>
+
+
+      <p>
+        Take a quick look behind the scenes
+        at Quianna's work.
+      </p>
+
+    </div>
+
+
+    <div class="video-card">
+
+      <div class="video-wrapper">
+
+        <video
+          controls
+          playsinline
+          preload="metadata"
+          poster="1786871408756.jpg"
+        >
+
+          <source
+            src="fb_1786872223847-8589911481.mp4"
+            type="video/mp4"
+          >
+
+          Your browser does not support
+          video playback.
+
+        </video>
+
+      </div>
+
+
+      <div class="video-copy">
+
+        <div class="video-label">
+          Behind the chair
+        </div>
+
+
+        <div class="video-script">
+          A little look
+        </div>
+
+
+        <h3>
+          Watch the work come together.
+        </h3>
+
+
+        <p>
+
+          From the first section to the finished
+          style, this quick behind-the-scenes look
+          gives you a glimpse of the care and
+          creativity that goes into every appointment.
+
+        </p>
+
+
+        <!-- UPDATED -->
+
+        <a
+          href="booking.html"
+          class="btn-primary"
+        >
+          Book Your Appointment →
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================
+     CLIENT EXPERIENCE
+===================================== -->
+
+<section class="testimonial">
+
+  <div class="quote-mark">
+    “
+  </div>
+
+
+  <blockquote>
+
+    Your next look starts
+    in the chair.
+
+  </blockquote>
+
+
+  <p>
+    ✦ Professional styling · Client care · Confidence
+  </p>
+
+</section>
+
+
+<!-- =====================================
+     BOOKING
+===================================== -->
+
+<section
+  class="wrap"
+  id="book"
+>
+
+  <div class="booking">
+
+
+    <div class="booking-left">
+
+      <div class="section-eyebrow">
+        ✦ Get In Touch
+      </div>
+
+
+      <h2>
+        Ready for your next appointment?
+      </h2>
+
+
+      <p>
+
+        Now booking. Use the online booking
+        form to request your appointment.
+        Your request will be sent to Quianna
+        for approval.
+
+      </p>
+
+
+      <div class="contact-list">
+
+
+        <div class="contact-item">
+
+          <div class="ic">
+            ☎
+          </div>
+
+          <a href="tel:+18162980574">
+            (816) 298-0574
+          </a>
+
+        </div>
+
+
+        <div class="contact-item">
+
+          <div class="ic">
+            ✉
+          </div>
+
+          <a href="mailto:destyles476@gmail.com">
+            destyles476@gmail.com
+          </a>
+
+        </div>
+
+
+        <div class="contact-item">
+
+          <div class="ic">
+            📅
+          </div>
+
+          <a href="booking.html">
+            Online Booking
+          </a>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+
+    <div class="booking-right">
+
+
+      <div>
+
+        <div class="display">
+          Studio hours
+        </div>
+
+
+        <p>
+          Appointments are available by booking.
+        </p>
+
+
+        <div class="hours">
+
+          <span>
+            Tue – Fri
+          </span>
+
+          <span>
+            10am – 6pm
+          </span>
+
+        </div>
+
+
+        <div class="hours">
+
+          <span>
+            Saturday
+          </span>
+
+          <span>
+            9am – 4pm
+          </span>
+
+        </div>
+
+
+        <div class="hours">
+
+          <span>
+            Sun – Mon
+          </span>
+
+          <span>
+            Closed
+          </span>
+
+        </div>
+
+
+        <div class="deposit-note">
+
+          ✦ Deposit is required to secure
+          the appointment. Remaining balance
+          is due on the day of service.
+
+        </div>
+
+      </div>
+
+
+      <!-- UPDATED -->
+
+      <a
+        href="booking.html"
+        class="btn-primary"
+        style="margin-top:26px;"
+      >
+        Book an Appointment →
+      </a>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================
+     FOOTER
+===================================== -->
+
+<footer>
+
+
+  <div class="footer-brand">
+
+    <img
+      src="1786871408756.jpg"
+      alt="Quianna Thomas"
+    >
+
+    <span>
+      Quianna Thomas
+    </span>
+
+  </div>
+
+
+  <div>
+    Professional Hairstylist · Always Open
+  </div>
+
+
+  <!-- OWNER LOGIN -->
+
+  <a
+    href="login.html"
+    class="owner-login"
+  >
+    Owner Login
+  </a>
+
+
+</footer>
+
+
+<!-- =====================================
+     LIGHTBOX
+===================================== -->
+
+<div
+  class="lightbox"
+  id="lightbox"
+  aria-hidden="true"
+>
+
+  <button
+    class="lightbox-close"
+    id="lightboxClose"
+    aria-label="Close image"
+  >
+    ×
+  </button>
+
+
+  <img
+    id="lightboxImage"
+    src=""
+    alt="Expanded hairstyle"
+  >
+
+</div>
+
+
+<!-- =====================================
+     JAVASCRIPT
+===================================== -->
+
+<script>
+
+/* =====================================
+   HEADER SCROLL EFFECT
+===================================== */
+
+const header =
+  document.getElementById('siteHeader');
+
+
+window.addEventListener(
+  'scroll',
+  function(){
+
+    if(window.scrollY > 40){
+
+      header.classList.add('scrolled');
+
+    }else{
+
+      header.classList.remove('scrolled');
+
+    }
+
+  },
+  {passive:true}
+);
+
+
+/* =====================================
+   PORTFOLIO LIGHTBOX
+===================================== */
+
+const portfolioItems =
+  document.querySelectorAll('.portfolio-item');
+
+const lightbox =
+  document.getElementById('lightbox');
+
+const lightboxImage =
+  document.getElementById('lightboxImage');
+
+const lightboxClose =
+  document.getElementById('lightboxClose');
+
+
+portfolioItems.forEach(function(item){
+
+  item.addEventListener(
+    'click',
+    function(){
+
+      const image =
+        item.getAttribute('data-image');
+
+      lightboxImage.src = image;
+
+      lightbox.classList.add('active');
+
+      lightbox.setAttribute(
+        'aria-hidden',
+        'false'
+      );
+
+      document.body.style.overflow =
+        'hidden';
+
+    }
+  );
+
+});
+
+
+function closeLightbox(){
+
+  lightbox.classList.remove('active');
+
+  lightbox.setAttribute(
+    'aria-hidden',
+    'true'
+  );
+
+  lightboxImage.src = '';
+
+  document.body.style.overflow = '';
+
+}
+
+
+lightboxClose.addEventListener(
+  'click',
+  closeLightbox
+);
+
+
+lightbox.addEventListener(
+  'click',
+  function(event){
+
+    if(event.target === lightbox){
+
+      closeLightbox();
+
+    }
+
+  }
+);
+
+
+document.addEventListener(
+  'keydown',
+  function(event){
+
+    if(event.key === 'Escape'){
+
+      closeLightbox();
+
+    }
+
+  }
+);
+
+
+lightboxImage.addEventListener(
+  'click',
+  function(event){
+
+    event.stopPropagation();
+
+  }
+);
+
+</script>
+
+
+</body>
+          </html>
